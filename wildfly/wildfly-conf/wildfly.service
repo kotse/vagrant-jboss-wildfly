@@ -1,0 +1,11 @@
+[Unit]
+Description=Wildfly Application Server
+After=syslog.target network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/wildfly/bin/wildfly-start.sh
+User=wildfly
+
+[Install]
+WantedBy=multi-user.target
